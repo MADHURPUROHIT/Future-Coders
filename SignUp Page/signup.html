@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./signup.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900"
+      rel="stylesheet"
+    />
+    <title>SignUp Page</title>
+    <script>
+      function validateAndRedirect(event) {
+        // Prevent form submission
+        event.preventDefault();
+
+        // Get the values from input fields
+        const username = document.getElementById("username").value.trim();
+        const password = document.getElementById("password").value.trim();
+
+        // Check if either username or password is empty
+        if (username === "" || password === "") {
+          alert("Please fill in both username and password.");
+        } else {
+          // If fields are filled, redirect to the target page
+          window.location.href = "../index.html"; // Replace with your target page
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <form onsubmit="validateAndRedirect(event)" method="post">
+        <div class="row">
+          <div class="col">
+            <h3 class="title">User Information</h3>
+
+            <div class="inputBox">
+              <span>full name :</span>
+              <input
+                type="text"
+                placeholder="john deo"
+                name="User Name: "
+                id="username"
+                autocomplete="off"
+                required
+              />
+            </div>
+            <div class="inputBox">
+              <span>email :</span>
+              <input
+                type="email"
+                placeholder="example@example.com"
+                id="password"
+                name="User Email: "
+                autocomplete="off"
+                required
+              />
+            </div>
+            <div class="inputBox">
+              <span>address :</span>
+              <input
+                type="text"
+                placeholder="room - street - locality"
+                name="Address: "
+                autocomplete="off"
+                required
+              />
+            </div>
+            <div class="inputBox">
+              <span>city :</span>
+              <input
+                type="text"
+                placeholder="mumbai"
+                name="City: "
+                autocomplete="off"
+                required
+              />
+            </div>
+
+            <div class="flex">
+              <div class="inputBox">
+                <span>state :</span>
+                <input
+                  type="text"
+                  placeholder="india"
+                  name="State: "
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div class="inputBox">
+                <span>zip code :</span>
+                <input
+                  type="text"
+                  placeholder="123456"
+                  name="Postal Code: "
+                  autocomplete="off"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <h3 class="title">Educational Details</h3>
+
+            <div class="inputBox">
+              <span>college name:</span>
+              <input
+                type="text"
+                placeholder="Enter Institute/University Name"
+                name="College Name: "
+                autocomplete="off"
+                required
+              />
+            </div>
+            <div class="inputBox">
+              <span>branch name:</span>
+              <input
+                type="text"
+                placeholder="Enter Your Branch"
+                name="Branch: "
+                autocomplete="off"
+                required
+              />
+            </div>
+            <div class="inputBox">
+              <span>current semester:</span>
+              <input
+                type="number"
+                placeholder="Enter your semester"
+                min="1"
+                max="8"
+                name="Semester: "
+                autocomplete="off"
+                required
+              />
+            </div>
+            <div class="inputBox">
+              <span>enrollment no.:</span>
+              <input
+                type="text"
+                placeholder="123XY012345"
+                minlength="12"
+                name="Enrollment No.: "
+                autocomplete="off"
+                required
+              />
+            </div>
+
+            <div class="flex">
+              <div class="inputBox">
+                <span>passing year :</span>
+                <input
+                  type="number"
+                  placeholder="2022"
+                  name="Passing Year: "
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div class="inputBox">
+                <span>CGPA :</span>
+                <input
+                  type="text"
+                  placeholder="8.7"
+                  minlength="1"
+                  pattern="^(10(\.0+)?|([1-9](\.\d+)?))$"
+                  title="Please enter a number between 1 to 10 (e.g., 1, 2.2, 8.5, 10)"
+                  name="CGPA: "
+                  autocomplete="off"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <input type="submit" value="Sign Up" class="submit-btn" />
+      </form>
+    </div>
+  </body>
+</html>

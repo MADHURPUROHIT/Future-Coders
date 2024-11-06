@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/M-Logo.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Jost:wght@100..900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Urbanist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./login-style.css" />
+    <title>SignIn/LogIn Page</title>
+    <script>
+      function validateAndRedirect(event) {
+        // Prevent form submission
+        event.preventDefault();
+
+        // Get the values from input fields
+        const username = document.getElementById("username").value.trim();
+        const password = document.getElementById("password").value.trim();
+
+        // Check if either username or password is empty
+        if (username === "" || password === "") {
+          alert("Please fill in both username and password.");
+        } else {
+          // If fields are filled, redirect to the target page
+          window.location.href = "../index.html"; // Replace with your target page
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="box">
+      <span class="borderclass"></span>
+      <form onsubmit="validateAndRedirect(event)">
+        <h2>Sign In</h2>
+        <div class="inputbox">
+          <input type="text" name="User-name: " id="username" required />
+          <span>Username</span>
+          <i></i>
+        </div>
+
+        <div class="inputbox">
+          <input
+            type="password"
+            name="Hash: "
+            id="password"
+            minlength="6"
+            required
+          />
+          <span>Password</span>
+          <i></i>
+        </div>
+
+        <div class="links">
+          <a href="#">Forgot Password?</a>
+          <a href="../SignUp Page/signup.html">SignUp</a>
+        </div>
+
+        <input type="submit" value="LogIn" />
+      </form>
+    </div>
+  </body>
+</html>

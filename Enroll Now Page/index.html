@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Enrollment Form - Our Course</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- External CSS -->
+  </head>
+  <body>
+    <!-- Enrollment Form Section -->
+    <section id="enrollment-form-section">
+      <div class="form-container">
+        <h2 class="form-title">Enroll in Our Course</h2>
+        <form
+          action="https://formspree.io/f/xkgnrjqz"
+          method="POST"
+          class="enrollment-form"
+        >
+          <div class="form-group">
+            <label for="full-name">Full Name</label>
+            <input
+              type="text"
+              id="full-name"
+              name="full-name"
+              required
+              placeholder="Enter your full name"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="Enter your email"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              placeholder="Enter your phone number"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="course-level">Course</label>
+            <select id="course-level" name="course-level" required>
+              <option value="" selected disabled>Choose another option</option>
+              <option value="html">HTML</option>
+              <option value="css">CSS</option>
+              <option value="javascript">JavaScript</option>
+              <option value="c++">C++</option>
+              <option value="java">Java</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="payment-method">Payment Method</label>
+            <select id="payment-method" name="payment-method" required>
+              <option value="" selected disabled>Choose payment method</option>
+              <option value="credit-card">Credit Card</option>
+              <option value="paypal">PayPal</option>
+              <option value="bank-transfer">Bank Transfer</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="comments">Additional Comments (Optional)</label>
+            <textarea
+              id="comments"
+              name="comments"
+              placeholder="Any additional comments or questions?"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn submit-btn">
+            Submit Enrollment
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="footer">
+      <p class="footer-text">© 2024 HTML Course. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

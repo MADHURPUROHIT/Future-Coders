@@ -1,0 +1,261 @@
+/* General Reset and Base Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Header and Navigation */
+#header {
+  background-color: #4caf50;
+  padding: 10px 0;
+  text-align: center;
+}
+
+#navbar .nav-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#navbar .nav-item {
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#navbar .nav-item:hover {
+  background-color: #333;
+}
+
+/* Main Content */
+#main-content {
+  padding: 20px;
+}
+
+/* Course Intro */
+#course-intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.course-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.course-description {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.course-image {
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* Course Syllabus */
+#course-syllabus {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #4caf50;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.syllabus-list {
+  padding: 0;
+  text-align: center;
+}
+
+.syllabus-item {
+  font-size: 1.2rem;
+  color: #333;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+.syllabus-item:hover {
+  background-color: #f1f1f1;
+}
+
+/* Instructor Section */
+#instructor {
+  margin-bottom: 40px;
+}
+
+.instructor-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+}
+
+.instructor-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.instructor-details {
+  max-width: 500px;
+}
+
+.instructor-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.instructor-bio {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Enroll Section */
+#enroll {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.enroll-description {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.enroll-btn:hover {
+  background-color: #45a049;
+}
+
+/* Footer */
+#footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  #navbar .nav-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .course-title {
+    font-size: 2rem;
+  }
+
+  .course-description {
+    font-size: 1rem;
+  }
+
+  .course-image {
+    width: 90%;
+  }
+
+  .instructor-info {
+    flex-direction: column;
+  }
+
+  .instructor-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .instructor-details {
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .syllabus-item {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    padding: 10px 25px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .course-title {
+    font-size: 1.5rem;
+  }
+
+  .course-description {
+    font-size: 0.9rem;
+  }
+
+  .syllabus-item {
+    font-size: 1rem;
+  }
+
+  .instructor-name {
+    font-size: 1.2rem;
+  }
+
+  .instructor-bio {
+    font-size: 0.9rem;
+  }
+
+  .enroll-description {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+  }
+}

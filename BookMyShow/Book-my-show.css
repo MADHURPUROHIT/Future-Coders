@@ -1,0 +1,270 @@
+/***** Base Section *****/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+  scrollbar-width: none;
+}
+
+:root {
+  --header-background-color: rgb(255, 255, 255);
+  --card-hover-color: rgb(250, 250, 250);
+  --main-background-color: rgb(245, 245, 245);
+  --btn-color: rgb(248, 68, 100);
+  --btn-hover-color: rgb(255, 63, 98);
+  --premier-background-color: rgb(43, 49, 73);
+  --footer-service-section: rgb(64, 64, 67);
+  --footer-background-color: rgb(51, 51, 56);
+  --list-your-show-color: rgb(49, 48, 53);
+  --transition-background-color: rgb(235, 235, 235);
+}
+
+/***** End Base Section *****/
+
+/***** Repeated CSS Section *****/
+main {
+  background-color: var(--main-background-color);
+}
+
+input,
+select {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+p,
+a {
+  font-size: 1.3rem;
+  letter-spacing: 0.05rem;
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 45px;
+}
+
+/***** End Repeated CSS Section *****/
+
+/***** Header Section *****/
+header > .flex-container {
+  overflow: hidden;
+
+  & .left-container {
+    display: flex;
+    align-items: center;
+    width: 60vw;
+
+    & .image img {
+      width: 15rem;
+      margin-right: 1rem;
+    }
+
+    & .search {
+      width: 100%;
+      max-width: 54.9rem;
+      height: 3.6rem;
+      border: 1px solid rgb(238, 238, 238);
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 1.4rem 1rem 1.4rem 0;
+
+      & img {
+        width: 2rem;
+        margin: 0 1rem;
+      }
+
+      & input {
+        width: 100%;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  & .right-container {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+
+    & .city-dropdown {
+      margin-right: 2rem;
+      & select {
+        cursor: pointer;
+        font-size: 1.4rem;
+      }
+    }
+
+    & .sign-in a {
+      color: var(--header-background-color);
+      background-color: var(--btn-color);
+      padding: 0.4rem 1.2rem;
+      border: 1px solid var(--btn-color);
+      border-radius: 0.5rem;
+      font-weight: 400;
+
+      &:hover {
+        background-color: var(--btn-hover-color);
+      }
+    }
+  }
+}
+
+/***** End Header Section *****/
+
+/***** Hero Section *****/
+.hero-section {
+  & .features {
+    background-color: var(--main-background-color);
+    padding: 15px 45px 15px 45px;
+    font-weight: 400;
+    overflow: hidden;
+
+    & .left-features {
+      display: flex;
+      gap: 1rem;
+      cursor: pointer;
+    }
+
+    & .right-features {
+      display: flex;
+      gap: 1rem;
+      cursor: pointer;
+
+      & p {
+        font-size: 1.19rem;
+      }
+    }
+  }
+
+  & .bg-change {
+    background-color: var(--transition-background-color);
+    padding: 1.3rem 0;
+    overflow: hidden;
+
+    & .first {
+      display: flex;
+      overflow: hidden;
+      gap: 1rem;
+      cursor: pointer;
+
+      & img {
+        border-radius: 1.5rem;
+        transform: translate(-1180px);
+        animation: 10s linear infinite alternate-reverse slide-in;
+      }
+
+      & .second-repeat-image {
+        transform: translate(-1180px);
+      }
+    }
+  }
+}
+@keyframes slide-in {
+  from {
+    transform: translate(-2450px);
+  }
+  to {
+    transform: translate(-1180px);
+  }
+}
+
+/***** End Hero Section *****/
+
+/***** Recommended Movies Section *****/
+.movies-collection {
+  padding: 35px 45px 35px;
+
+  & .recommendation {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+
+    & p {
+      font-size: 2.3rem;
+      font-weight: 600;
+    }
+
+    & a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--btn-color);
+      font-size: 1.4rem;
+
+      & img {
+        width: 1.3rem;
+      }
+    }
+  }
+
+  & .movies-cards {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none;
+
+    & .card {
+      padding: 7px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all linear 0.2s;
+
+      & .image img {
+        width: 222px;
+        height: 378px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+      }
+
+      &:hover {
+        background-color: var(--header-background-color);
+        box-shadow: 0px 5px 24px 2px rgba(140, 149, 159, 0.2);
+        scale: 1.01;
+      }
+
+      & .movie-name p {
+        font-size: 1.8rem;
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+
+      & .movie-category p {
+        font-size: 1.6rem;
+        font-weight: 300;
+        color: #2c2c2c;
+      }
+    }
+  }
+}
+
+/***** End Recommended Movies Section *****/
+
+/***** Advertisement Section *****/
+.advertise {
+  padding: 0 45px;
+
+  & .advertisement {
+    padding: 50px 0;
+    & img {
+      width: 100%;
+    }
+  }
+}
+
+/***** End Advertisement Section *****/
